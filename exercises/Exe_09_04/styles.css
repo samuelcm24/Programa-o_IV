@@ -1,0 +1,254 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Cambria, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fundo {
+    background-color: pink;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    background-color: rgb(235, 21, 92);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.linha_titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.imagem_titulo {
+    width: 60px;
+    height: 60px;
+}
+
+/* ===== MENU ===== */
+.menu {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.20);
+}
+
+/* ===== BANNER ===== */
+.cabecalho_sub_titulo {
+    background: linear-gradient(to right, rgb(248, 152, 184), rgb(242, 182, 198));
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.linha_sub_titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.sub_titulo {
+    margin: 0;
+}
+
+.imagem_sub_titulo {
+    width: 35px;
+    height: 35px;
+}
+
+/* ===== CARD GERAL ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 85%;
+    border: 2px solid white;
+    padding: 16px;
+    margin-top: 25px;
+    border-radius: 20px;
+    transition: 0.2s;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+    border-color: pink;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== PERSONAGENS ===== */
+.personagens {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.personagem {
+    width: 85%;
+    border: 2px solid white;
+    padding: 16px;
+    margin-top: 25px;
+    border-radius: 20px;
+    transition: 0.2s;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.personagem:hover {
+    border-color: pink;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.lista_personagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.lista_personagem {
+    width: 180px;
+    border: 2px solid white;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: rgb(244, 182, 192);
+    text-align: center;
+    transition: 0.2s;
+}
+
+.lista_personagem:hover {
+    border-color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.nome_personagem {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info_personagem {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lista_galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.imagem_galeria {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 18px;
+    background-color: rgb(244, 182, 192);
+    transition: 0.2s;
+}
+
+.imagem_galeria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== FORMULÁRIO ===== */
+.entrar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(233, 193, 204);
+    border-radius: 10px;
+    font-family: Cambria, sans-serif;
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.formulario button {
+    background-color: rgb(239, 124, 153);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: rgb(239, 124, 153);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 25px;
+}
