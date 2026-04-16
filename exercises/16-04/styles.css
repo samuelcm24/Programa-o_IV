@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle, #2b0f1e, #12060d, #000000);
+    color: white;
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+
+.tela {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #ff0055;
+}
+
+.painel {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    gap: 25px;
+    font-size: 1.2rem;
+}
+
+#botao-iniciar {
+    background: #ff0055;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#botao-iniciar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.7);
+}
+
+
+.area-jogo {
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.95));
+    box-shadow: inset 0 0 30px rgba(255, 0, 85, 0.15);
+}
+
+.inimigo {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    user-select: none;
+    animation: surgir 0.25s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 85, 0.8));
+    transition: transform 0.1s;
+}
+
+.inimigo:hover {
+    transform: scale(1.08);
+}
+
+.particula {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: crimson;
+    pointer-events: none;
+    animation: explodir 0.5s ease forwards;
+}
+
+.mensagem-final {
+    margin-top: 18px;
+    font-size: 1.3rem;
+    min-height: 30px;
+    text-shadow: 0 0 8px #ff0055;
+}
+
+#efeito-cursor {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255,215,0,0.95) 0%, rgba(255,215,0,0.45) 45%, rgba(255,215,0,0) 75%);
+    box-shadow: 0 0 10px gold, 0 0 20px goldenrod, 0 0 30px rgba(255, 215, 0, 0.7);
+    z-index: 9999;
+    transition: transform 0.08s;
+}
+
+#efeito-cursor.ativo {
+    transform: translate(-50%, -50%) scale(1.6);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes explodir {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2.8);
+    }
+}
